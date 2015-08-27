@@ -8,8 +8,9 @@ puts "****************"
 puts
 
 loader = DataLoader.new(
-  file: File.expand_path("../data/data_export_2014_06_20_15_59_02.json",
-                         __FILE__))
+  file: File.expand_path(
+    "../data/data_export_2014_06_20_15_59_02.json",
+    __FILE__))
 
 analyzer = DataAnalyzer.new(loader)
 analyzer.load(a_group: { cohort: "A" }, b_group: { cohort: "B" })
